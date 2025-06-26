@@ -6,10 +6,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-// Swingコンポーネントサンプル
+// Swing component sample
 public class swingSlot {
     
-    // Swingコンポーネント
+    // Swing components
     private static JFrame mainFrame = null;
     private static JPanel mainPanel = null;
     private static JButton btnChange = null;
@@ -18,7 +18,7 @@ public class swingSlot {
     private static JTextField reel3 = null;
     private static JTextField msgbox = null;
     
-    // メイン関数
+    // Main function
     public static void main(String[] args) {
         
         mainLogic a = mainLogic.getInstance();
@@ -26,25 +26,25 @@ public class swingSlot {
         
         if ( a == b)
         {
-            System.out.println("同じオブジェクト");
+            System.out.println("Singleton Object");
         }
         
-        // フレームの初期化
+        // Frame initialization
         mainFrame = new JFrame();
         mainFrame.setTitle("SWING SLOT");
 
-        // テキストボックスの初期化
+        // Textbox initialization
         reel1 = new JTextField("", 3);
         reel2 = new JTextField("", 3);
         reel3 = new JTextField("", 3);
         msgbox = new JTextField("", 15);
         msgbox.setText("PRESS ROLL");
         
-        // ボタンの初期化
+        // Button initialization
         btnChange = new JButton("ROLL");
         btnChange.addActionListener(new rollAction());
         
-        // パネルの初期化
+        // Panel initialization
         mainPanel = new JPanel();
         mainPanel.add(msgbox);
         mainPanel.add(reel1);
@@ -52,18 +52,18 @@ public class swingSlot {
         mainPanel.add(reel3);
         mainPanel.add(btnChange);
         
-        // フレームの設定
+        // Frame settings
         mainFrame.getContentPane().add(mainPanel);
         mainFrame.setBounds( 10, 10, 200, 120);
         mainFrame.setVisible(true);
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-	    // スレッドの初期化
-	    mainLoop loop = new mainLoop();
-	    loop.start();
+    	// Start slot thread
+    	mainLoop loop = new mainLoop();
+    	loop.start();
     }
     
-    // ロールボタン押下時のアクションクラス
+    // Action class for roll button
     public static class rollAction implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             System.out.println("ROLL PRESSED");
@@ -78,7 +78,7 @@ public class swingSlot {
         }
     }
     
-    // スレッドを継承したメインループクラス
+    // Slot thread class
     public static class mainLoop extends Thread {
         public void run() {
             System.out.println("**********THREAD START**********");
@@ -95,7 +95,7 @@ public class swingSlot {
         }
     }
 
-	// メイン処理クラス(シングルトン)
+	// Main logic class (Singleton)
 	public static class mainLogic {
 	    
 	    private static mainLogic mainLogicInstance = null;
@@ -116,7 +116,7 @@ public class swingSlot {
 	    private static int userscore = 0;
 	    private static String outscore = null;
 		
-		// コンストラクター
+		// Constructor
 	    private mainLogic() {
 	        System.out.println("CALLED");
 	        mainLogicInstance = new mainLogic();
@@ -138,13 +138,13 @@ public class swingSlot {
 	        _isRoll = isRoll;
 	    }
 	    
-	    // メインループ関数(この処理はループ内で実装すること)
+	    // Main loop function (called in loop)
 	    public static void mainLoop() {
-		    // リールを回す
+	    	// Roll the reels
 	        rollReel();
 	    }
 	    
-	    // スコア判定
+	    // Judge score
 		public static void judge() {
 			if (reelinfo[0] == 5 && reelinfo[1] == 5 && reelinfo[2] == 5) {
 			    // *7*
@@ -163,12 +163,12 @@ public class swingSlot {
 			} else if((reelinfo[0] == 0 || reelinfo[0] == 6)&&
 			           (reelinfo[1] == 0 || reelinfo[1] == 6)&&
 			           (reelinfo[2] == 0 || reelinfo[2] == 6)) {
-	            // BAR
+            // BAR
 			    winnerrate=500;
 			} else if ((reelinfo[0] == 3 || reelinfo[0] == 9)&&
 			           (reelinfo[1] == 3 || reelinfo[1] == 9)&&
 			           (reelinfo[2] == 3 || reelinfo[2] == 9)) {
-	            // @@@ 
+            // @@@ 
 			    winnerrate=1;
 			} else if(reelinfo[0] == 7 && reelinfo[1] == 7 && reelinfo[2] == 7) {
 			    //CHR
@@ -189,7 +189,7 @@ public class swingSlot {
 			winnerrate = 0;
 		}
 		
-	    // リールを回す関数
+	    // Reel rolling function
 		public static void rollReel() {
 		    if (_isRoll) {
 				reelinfo[0] = (int)(Math.random() * 9);
