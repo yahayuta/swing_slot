@@ -1,0 +1,66 @@
+🎵 SOUND SYSTEM INFORMATION 🎵
+
+✅ SOUND EFFECTS GENERATED SUCCESSFULLY!
+
+The slot machine now includes complete sound effects that were generated programmatically.
+
+=== GENERATED SOUND FILES ===
+✅ sounds/spin.wav (172KB) - Mechanical spinning sound (2 seconds)
+✅ sounds/win.wav (129KB) - Cheerful victory chime (1.5 seconds)
+✅ sounds/lose.wav (86KB) - Soft disappointment sound (1 second)
+✅ sounds/jackpot.wav (258KB) - Exciting celebration (3 seconds)
+✅ sounds/toggle.wav (43KB) - UI click sound (0.5 seconds)
+
+=== SOUND DESCRIPTIONS ===
+
+🎰 SPIN SOUND
+- Duration: 2 seconds
+- Style: Mechanical whirring with varying frequency (200-250 Hz)
+- When: Plays when you press ROLL and reels start spinning
+
+🎉 WIN SOUND
+- Duration: 1.5 seconds
+- Style: Ascending C major chord (C, E, G notes)
+- When: Plays for regular wins (not jackpots)
+
+😔 LOSE SOUND
+- Duration: 1 second
+- Style: Descending tone (400 Hz to 300 Hz)
+- When: Plays when you don't win
+
+🏆 JACKPOT SOUND
+- Duration: 3 seconds
+- Style: Exciting ascending arpeggio (C major scale)
+- When: Plays for big wins (50x+ bet multiplier)
+
+🔊 TOGGLE SOUND
+- Duration: 0.5 seconds
+- Style: High-frequency click (800 Hz)
+- When: Plays when toggling sound on/off
+
+=== TECHNICAL DETAILS ===
+- Format: WAV (44.1kHz, 8-bit, mono)
+- Quality: Generated programmatically using sine waves
+- Volume: Set to 30% to prevent clipping
+- Compatibility: Works with JavaFX MediaPlayer
+
+=== HOW TO USE ===
+1. The sound files are automatically generated when you run generate_sounds.bat
+2. The slot machine will automatically play sounds when events occur
+3. Use the 🔊 SOUND button to toggle sound effects on/off
+4. Sound preference is saved between game sessions
+
+=== REGENERATING SOUNDS ===
+If you want to regenerate the sound effects:
+1. Run: generate_sounds.bat
+2. This will recreate all sound files with the same characteristics
+3. No need to recompile the slot machine
+
+=== CUSTOMIZATION ===
+To create different sound effects:
+1. Edit SoundGenerator.java
+2. Modify the frequency, duration, or tone generation
+3. Run generate_sounds.bat to create new files
+4. The slot machine will use the new sounds automatically
+
+🎮 Your slot machine now has full sound effects! Enjoy the enhanced gaming experience! 🎵 

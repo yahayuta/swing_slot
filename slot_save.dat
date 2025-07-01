@@ -1,0 +1,8 @@
+#Slot Machine Save Data
+#Wed Jul 02 08:45:58 JST 2025
+bestWin=1
+highScore=1000
+soundEnabled=true
+totalSpins=12
+totalWins=5
+userScore=993

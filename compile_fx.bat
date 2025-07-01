@@ -1,9 +1,11 @@
 @echo off
-REM Compile SlotAppFX.java with JavaFX
+REM Compile Enhanced SlotAppFX with JavaFX (Phase 2)
 set FXPATH=C:\javafx-sdk-24.0.1\lib
-javac --module-path "%FXPATH%" --add-modules javafx.controls,javafx.fxml SlotAppFX.java
-if %errorlevel% neq 0 (
-    echo Compile failed.
-    exit /b %errorlevel%
+javac --module-path "%FXPATH%" --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.media SlotAppFX.java
+if %ERRORLEVEL% EQU 0 (
+    echo Compilation successful! Phase 2 features ready.
+    echo Run with: run_fx.bat
+) else (
+    echo Compilation failed!
+    pause
 )
-echo Compile successful.
