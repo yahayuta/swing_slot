@@ -1,66 +1,122 @@
-🎵 SOUND SYSTEM INFORMATION 🎵
+🎰 LAS VEGAS SLOT MACHINE SOUND SYSTEM 🎰
 
-✅ SOUND EFFECTS GENERATED SUCCESSFULLY!
+✅ AUTHENTIC LAS VEGAS SOUND EFFECTS GENERATED!
 
-The slot machine now includes complete sound effects that were generated programmatically.
+The slot machine now includes complete Las Vegas casino sound effects that recreate the authentic slot machine experience.
 
-=== GENERATED SOUND FILES ===
-✅ sounds/spin.wav (172KB) - Mechanical spinning sound (2 seconds)
-✅ sounds/win.wav (129KB) - Cheerful victory chime (1.5 seconds)
-✅ sounds/lose.wav (86KB) - Soft disappointment sound (1 second)
-✅ sounds/jackpot.wav (258KB) - Exciting celebration (3 seconds)
-✅ sounds/toggle.wav (43KB) - UI click sound (0.5 seconds)
+=== GENERATED LAS VEGAS SOUND FILES ===
+✅ sounds/spin.wav (215KB) - Authentic mechanical reel spinning (2.5 seconds)
+✅ sounds/win.wav (172KB) - Casino bell victory chimes (2 seconds)
+✅ sounds/lose.wav (103KB) - Wah-wah disappointment sound (1.2 seconds)
+✅ sounds/jackpot.wav (345KB) - Epic celebration sequence (4 seconds)
+✅ sounds/toggle.wav (26KB) - Casino button click (0.3 seconds)
+✅ sounds/coin.wav (69KB) - Metallic coin drop sound (0.8 seconds)
+✅ sounds/stop.wav (52KB) - Mechanical reel stop (0.6 seconds)
 
-=== SOUND DESCRIPTIONS ===
+=== LAS VEGAS SOUND DESCRIPTIONS ===
 
-🎰 SPIN SOUND
-- Duration: 2 seconds
-- Style: Mechanical whirring with varying frequency (200-250 Hz)
+🎰 SPIN SOUND (Authentic Mechanical Reels)
+- Duration: 2.5 seconds
+- Style: Multi-harmonic mechanical whirring (150-180 Hz base + harmonics)
+- Features: Random mechanical noise, authentic reel feel
 - When: Plays when you press ROLL and reels start spinning
 
-🎉 WIN SOUND
-- Duration: 1.5 seconds
-- Style: Ascending C major chord (C, E, G notes)
+🎉 WIN SOUND (Casino Bell Victory)
+- Duration: 2 seconds
+- Style: Casino bell sequence (C, E, G, C notes with harmonics)
+- Features: Bell-like decay, authentic casino feel
 - When: Plays for regular wins (not jackpots)
 
-😔 LOSE SOUND
-- Duration: 1 second
-- Style: Descending tone (400 Hz to 300 Hz)
+😔 LOSE SOUND (Wah-Wah Disappointment)
+- Duration: 1.2 seconds
+- Style: Descending wah-wah effect (350 Hz to 200 Hz)
+- Features: Frequency modulation for authentic disappointment
 - When: Plays when you don't win
 
-🏆 JACKPOT SOUND
-- Duration: 3 seconds
-- Style: Exciting ascending arpeggio (C major scale)
+🏆 JACKPOT SOUND (Epic Celebration)
+- Duration: 4 seconds
+- Style: Exciting ascending arpeggio with amplitude modulation
+- Features: Multiple harmonics, amplitude modulation for excitement
 - When: Plays for big wins (50x+ bet multiplier)
 
-🔊 TOGGLE SOUND
-- Duration: 0.5 seconds
-- Style: High-frequency click (800 Hz)
+🔊 TOGGLE SOUND (Casino Button Click)
+- Duration: 0.3 seconds
+- Style: Sharp high-frequency click (1200 Hz)
+- Features: Quick attack and decay envelope
 - When: Plays when toggling sound on/off
+
+🪙 COIN DROP SOUND (Metallic Coin)
+- Duration: 0.8 seconds
+- Style: Metallic coin drop (800 Hz with harmonics)
+- Features: Metallic resonance, authentic coin sound
+- When: Plays when placing bets
+
+🛑 REEL STOP SOUND (Mechanical Stop)
+- Duration: 0.6 seconds
+- Style: Mechanical stop (400 Hz with resonance)
+- Features: Mechanical resonance for authentic feel
+- When: Plays when reels stop spinning
 
 === TECHNICAL DETAILS ===
 - Format: WAV (44.1kHz, 8-bit, mono)
-- Quality: Generated programmatically using sine waves
-- Volume: Set to 30% to prevent clipping
-- Compatibility: Works with JavaFX MediaPlayer
+- Quality: Generated using advanced audio synthesis techniques
+- Volume: Optimized for authentic casino feel
+- Compatibility: Works perfectly with JavaFX MediaPlayer
+- Authenticity: Designed to mimic real Las Vegas slot machines
+
+=== LAS VEGAS AUTHENTICITY FEATURES ===
+
+🎰 Mechanical Realism:
+- Multi-harmonic frequencies for authentic mechanical sound
+- Random noise addition for realistic feel
+- Proper attack and decay envelopes
+
+🎉 Casino Bell Authenticity:
+- Multiple harmonics for bell-like quality
+- Natural decay for realistic bell sound
+- Proper frequency ratios for musical accuracy
+
+😔 Emotional Response:
+- Wah-wah effect for disappointment
+- Frequency modulation for authentic feel
+- Descending pitch for negative emotion
+
+🏆 Epic Celebration:
+- Amplitude modulation for excitement
+- Multiple harmonics for rich sound
+- Extended duration for jackpot impact
+
+🪙 Metallic Authenticity:
+- Metallic resonance frequencies
+- Proper harmonic structure for coin sound
+- Realistic duration for coin drop
 
 === HOW TO USE ===
-1. The sound files are automatically generated when you run generate_sounds.bat
-2. The slot machine will automatically play sounds when events occur
-3. Use the 🔊 SOUND button to toggle sound effects on/off
+1. The Las Vegas sound files are automatically generated when you run generate_sounds.bat
+2. The slot machine will automatically play authentic casino sounds when events occur
+3. Use the 🔊 SOUND button to toggle the Vegas atmosphere on/off
 4. Sound preference is saved between game sessions
 
-=== REGENERATING SOUNDS ===
-If you want to regenerate the sound effects:
+=== REGENERATING LAS VEGAS SOUNDS ===
+If you want to regenerate the authentic casino sound effects:
 1. Run: generate_sounds.bat
-2. This will recreate all sound files with the same characteristics
+2. This will recreate all Las Vegas style sound files
 3. No need to recompile the slot machine
 
 === CUSTOMIZATION ===
-To create different sound effects:
+To create different Las Vegas style sound effects:
 1. Edit SoundGenerator.java
-2. Modify the frequency, duration, or tone generation
-3. Run generate_sounds.bat to create new files
-4. The slot machine will use the new sounds automatically
+2. Modify the frequency, harmonics, or modulation parameters
+3. Run generate_sounds.bat to create new authentic casino files
+4. The slot machine will use the new Vegas sounds automatically
 
-🎮 Your slot machine now has full sound effects! Enjoy the enhanced gaming experience! 🎵 
+=== LAS VEGAS ATMOSPHERE ===
+Your slot machine now provides an authentic Las Vegas casino experience with:
+- 🎰 Realistic mechanical reel sounds
+- 🎉 Authentic casino bell victories
+- 😔 Genuine disappointment sounds
+- 🏆 Epic jackpot celebrations
+- 🪙 Metallic coin drop effects
+- 🛑 Mechanical reel stop sounds
+
+🎮 Experience the authentic Las Vegas slot machine atmosphere! 🎰✨🎵 

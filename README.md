@@ -1,8 +1,8 @@
 # 🎰 Enhanced Slot Machine
 
-A modern slot machine game implemented in JavaFX with betting system, beautiful UI, engaging gameplay, and complete sound effects.
+A modern slot machine game implemented in JavaFX with betting system, beautiful UI, engaging gameplay, and authentic Las Vegas sound effects.
 
-**Status**: ✅ **Phase 2 Complete** - Enhanced with animations, save/load, sound effects, and high score tracking
+**Status**: ✅ **Phase 2 Complete** - Enhanced with animations, save/load, Las Vegas sound effects, and high score tracking
 
 ---
 
@@ -36,7 +36,7 @@ A modern slot machine game implemented in JavaFX with betting system, beautiful 
 - **Reel Spinning Animation**: 3D rotation effects during spins
 - **Message Animations**: Pulsing effects for win/loss messages
 - **Button Feedback**: Visual confirmation for save/load actions
-- **Smooth Transitions**: Professional 2-second spinning delay
+- **Smooth Transitions**: Professional 2.5-second spinning delay
 - **Spinning State**: Prevents multiple spins during animation
 
 ### 💾 Phase 2: Save/Load System ✅ COMPLETE
@@ -53,18 +53,20 @@ A modern slot machine game implemented in JavaFX with betting system, beautiful 
 - **Visual Indicators**: Color-coded labels for achievements
 - **Achievement Tracking**: Monitor progress over time
 
-### 🔊 Phase 2: Complete Sound System ✅ COMPLETE
-- **Generated Sound Effects**: 5 custom sound files created programmatically
+### 🔊 Phase 2: Authentic Las Vegas Sound System ✅ COMPLETE
+- **Generated Las Vegas Sound Effects**: 7 authentic casino sound files
 - **Sound Toggle**: Enable/disable sound effects with visual feedback
 - **Sound Categories**: 
-  - 🎰 **Spin Sound**: Mechanical whirring (2 seconds)
-  - 🎉 **Win Sound**: Cheerful victory chime (1.5 seconds)
-  - 😔 **Lose Sound**: Soft disappointment (1 second)
-  - 🏆 **Jackpot Sound**: Exciting celebration (3 seconds)
-  - 🔊 **Toggle Sound**: UI click (0.5 seconds)
+  - 🎰 **Spin Sound**: Authentic mechanical reel spinning (2.5 seconds)
+  - 🎉 **Win Sound**: Casino bell victory chimes (2 seconds)
+  - 😔 **Lose Sound**: Wah-wah disappointment sound (1.2 seconds)
+  - 🏆 **Jackpot Sound**: Epic celebration sequence (4 seconds)
+  - 🔊 **Toggle Sound**: Casino button click (0.3 seconds)
+  - 🪙 **Coin Drop Sound**: Metallic coin drop (0.8 seconds)
+  - 🛑 **Reel Stop Sound**: Mechanical reel stop (0.6 seconds)
 - **Visual Feedback**: Button shows current sound state
 - **Persistent Settings**: Sound preference saved between sessions
-- **Professional Quality**: WAV format, 44.1kHz, optimized volume
+- **Las Vegas Authenticity**: Multi-harmonic frequencies, mechanical realism, casino bell quality
 
 ### 🎮 Phase 2: Enhanced Controls ✅ COMPLETE
 - **💾 SAVE**: Save current game state with confirmation
@@ -82,13 +84,13 @@ A modern slot machine game implemented in JavaFX with betting system, beautiful 
 - JavaFX SDK 24.0.1 or newer ([Download here](https://gluonhq.com/products/javafx/))
 
 ### Quick Start
-1. **Generate Sounds**: Double-click `generate_sounds.bat` (one-time setup)
+1. **Generate Las Vegas Sounds**: Double-click `generate_sounds.bat` (one-time setup)
 2. **Compile**: Double-click `compile_fx.bat`
 3. **Run**: Double-click `run_fx.bat`
 
 ### Manual Commands
 ```sh
-# Generate sound effects (one-time)
+# Generate Las Vegas sound effects (one-time)
 javac SoundGenerator.java
 java SoundGenerator
 
@@ -104,11 +106,11 @@ java --module-path "C:\javafx-sdk-24.0.1\lib" --add-modules javafx.controls,java
 ## 🎮 How to Play
 
 1. **Set Your Bet**: Choose from $1, $5, $10, or $100 (MAX BET)
-2. **Press ROLL**: Watch the reels spin with animations and sound!
+2. **Press ROLL**: Watch the reels spin with animations and authentic Las Vegas sounds!
 3. **Watch Your Balance**: Keep track of your money and wins
 4. **Aim for Jackpots**: Three 7️⃣s give you the biggest payout!
 5. **Save Progress**: Use save/load buttons to preserve your game
-6. **Enjoy Sounds**: Toggle sound effects for immersive experience
+6. **Experience Vegas**: Toggle sound effects for authentic casino atmosphere
 
 ### Betting Strategy
 - Start with small bets to build your balance
@@ -134,12 +136,12 @@ java --module-path "C:\javafx-sdk-24.0.1\lib" --add-modules javafx.controls,java
 - **File Location**: `slot_save.dat` in game directory
 - **Data Preserved**: Balance, wins, spins, high scores, sound settings
 
-### Sound System
-- **Auto-Generated**: Run `generate_sounds.bat` to create sound files
-- **5 Sound Effects**: Spin, win, lose, jackpot, and toggle sounds
+### Las Vegas Sound System
+- **Auto-Generated**: Run `generate_sounds.bat` to create authentic casino sound files
+- **7 Sound Effects**: Spin, win, lose, jackpot, toggle, coin drop, and reel stop sounds
 - **Toggle Control**: Enable/disable sounds with 🔊 SOUND button
 - **Persistent Settings**: Sound preference saved between sessions
-- **Professional Quality**: Generated using mathematical sine waves
+- **Authentic Quality**: Multi-harmonic frequencies, mechanical realism, casino bell quality
 
 ---
 
@@ -147,19 +149,21 @@ java --module-path "C:\javafx-sdk-24.0.1\lib" --add-modules javafx.controls,java
 
 ```
 ├── SlotAppFX.java          # Enhanced JavaFX version (Phase 2) ✅
-├── SoundGenerator.java     # Sound effects generator ✅
+├── SoundGenerator.java     # Las Vegas sound effects generator ✅
 ├── swingSlot.java          # Legacy Swing version (for reference)
 ├── compile_fx.bat          # Compile script (Phase 2) ✅
 ├── run_fx.bat              # Run script (Phase 2) ✅
 ├── generate_sounds.bat     # Sound generation script ✅
-├── sounds/                 # Generated sound effects ✅
-│   ├── spin.wav           # Mechanical spinning sound
-│   ├── win.wav            # Victory chime
-│   ├── lose.wav           # Disappointment sound
-│   ├── jackpot.wav        # Celebration sound
-│   └── toggle.wav         # UI click sound
+├── sounds/                 # Generated Las Vegas sound effects ✅
+│   ├── spin.wav           # Authentic mechanical reel spinning
+│   ├── win.wav            # Casino bell victory chimes
+│   ├── lose.wav           # Wah-wah disappointment sound
+│   ├── jackpot.wav        # Epic celebration sequence
+│   ├── toggle.wav         # Casino button click
+│   ├── coin.wav           # Metallic coin drop sound
+│   └── stop.wav           # Mechanical reel stop sound
 ├── slot_save.dat          # Save file (created automatically)
-├── sound_info.txt         # Sound system documentation ✅
+├── sound_info.txt         # Las Vegas sound system documentation ✅
 ├── README.md              # This file ✅
 └── LICENSE                # MIT License
 ```
@@ -178,10 +182,10 @@ java --module-path "C:\javafx-sdk-24.0.1\lib" --add-modules javafx.controls,java
 ### Phase 2 Features ✅
 - **Animation System**: JavaFX animations for reels and messages
 - **File I/O**: Properties-based save/load system
-- **Sound System**: Complete sound effects with generation utility
+- **Las Vegas Sound System**: Complete authentic casino sound effects
 - **High Score System**: Persistent achievement tracking
 - **Enhanced UI**: Additional controls and feedback
-- **Sound Generation**: Programmatic creation of WAV audio files
+- **Advanced Audio Synthesis**: Multi-harmonic frequencies, mechanical realism
 
 ### Code Improvements ✅
 - Better separation of concerns
@@ -190,7 +194,7 @@ java --module-path "C:\javafx-sdk-24.0.1\lib" --add-modules javafx.controls,java
 - Improved user experience with visual feedback
 - Comprehensive game statistics and persistence
 - Professional animation timing and effects
-- Complete sound system integration
+- Complete Las Vegas sound system integration
 
 ### Performance
 - **Fast Loading**: Optimized JavaFX application
@@ -198,7 +202,7 @@ java --module-path "C:\javafx-sdk-24.0.1\lib" --add-modules javafx.controls,java
 - **Memory Efficient**: Clean state management
 - **Cross-Platform**: Works on Windows, macOS, and Linux
 - **Persistent Data**: Efficient file-based save system
-- **Audio Optimized**: Generated sound files with proper format
+- **Audio Optimized**: Generated Las Vegas sound files with authentic quality
 
 ---
 
@@ -211,6 +215,7 @@ java --module-path "C:\javafx-sdk-24.0.1\lib" --add-modules javafx.controls,java
 - Tournament mode
 - Multiple game themes
 - Advanced sound customization
+- Real casino background ambience
 
 ---
 
@@ -222,7 +227,7 @@ java --module-path "C:\javafx-sdk-24.0.1\lib" --add-modules javafx.controls,java
 - **"Module not found"**: Check JavaFX path in batch files
 - **"Compilation failed"**: Ensure JavaFX SDK is properly installed
 - **"Save file error"**: Check write permissions in game directory
-- **"No sound"**: Run `generate_sounds.bat` to create sound files
+- **"No sound"**: Run `generate_sounds.bat` to create Las Vegas sound files
 
 ### JavaFX Setup
 1. Download JavaFX SDK from [Gluon](https://gluonhq.com/products/javafx/)
@@ -230,11 +235,11 @@ java --module-path "C:\javafx-sdk-24.0.1\lib" --add-modules javafx.controls,java
 3. Update batch files if using different path
 4. Ensure Java 22+ is installed and in PATH
 
-### Sound Setup
-1. Run `generate_sounds.bat` to create sound effects
-2. Ensure the `sounds` folder contains 5 WAV files
-3. Use 🔊 SOUND button to toggle sound effects
-4. Check `sound_info.txt` for detailed sound information
+### Las Vegas Sound Setup
+1. Run `generate_sounds.bat` to create authentic casino sound effects
+2. Ensure the `sounds` folder contains 7 WAV files
+3. Use 🔊 SOUND button to toggle the Vegas atmosphere
+4. Check `sound_info.txt` for detailed Las Vegas sound information
 
 ### Testing Your Setup
 ```sh
@@ -244,7 +249,7 @@ java -version
 # Check if JavaFX is accessible
 java --module-path "C:\javafx-sdk-24.0.1\lib" --add-modules javafx.controls --version
 
-# Generate sound effects
+# Generate Las Vegas sound effects
 .\generate_sounds.bat
 ```
 
@@ -276,13 +281,15 @@ The game saves the following data to `slot_save.dat`:
 - Best win
 - Sound settings
 
-### Sound Files
-Generated sound effects in `sounds/` folder:
-- **spin.wav** (172KB): Mechanical spinning sound
-- **win.wav** (129KB): Victory chime
-- **lose.wav** (86KB): Disappointment sound
-- **jackpot.wav** (258KB): Celebration sound
-- **toggle.wav** (43KB): UI click sound
+### Las Vegas Sound Files
+Generated authentic casino sound effects in `sounds/` folder:
+- **spin.wav** (215KB): Authentic mechanical reel spinning
+- **win.wav** (172KB): Casino bell victory chimes
+- **lose.wav** (103KB): Wah-wah disappointment sound
+- **jackpot.wav** (345KB): Epic celebration sequence
+- **toggle.wav** (26KB): Casino button click
+- **coin.wav** (69KB): Metallic coin drop sound
+- **stop.wav** (52KB): Mechanical reel stop sound
 
 ---
 
@@ -291,7 +298,7 @@ Generated sound effects in `sounds/` folder:
 
 ---
 
-**Enjoy the enhanced slot machine experience with complete Phase 2 features! 🎰✨🎬🎵**
+**Experience the authentic Las Vegas slot machine atmosphere with complete Phase 2 features! 🎰✨🎬🎵**
 
-*Last Updated: Phase 2 Complete with Full Sound System - Ready for Phase 3*
+*Last Updated: Phase 2 Complete with Authentic Las Vegas Sound System - Ready for Phase 3*
 

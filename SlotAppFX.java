@@ -290,9 +290,13 @@ public class SlotAppFX extends Application {
         userScore -= currentBet;
         totalSpins++;
         
-        // Simulate spinning delay
-        Timeline spinDelay = new Timeline(new KeyFrame(Duration.seconds(2), e -> {
+        // Play coin drop sound for betting
+        playSound("coin");
+        
+        // Simulate spinning delay with reel stop sound
+        Timeline spinDelay = new Timeline(new KeyFrame(Duration.seconds(2.5), e -> {
             stopSpinning();
+            playSound("stop"); // Play reel stop sound
             completeSpin();
         }));
         spinDelay.play();
