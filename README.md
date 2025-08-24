@@ -1,6 +1,6 @@
 # 🎰 Enhanced Slot Machine
 
-A modern slot machine game implemented in JavaFX with betting system, beautiful UI, engaging gameplay, and authentic Las Vegas sound effects.
+A modern slot machine game implemented in JavaFX. Features a "Classic Casino" theme, a betting system, engaging gameplay, and authentic Las Vegas sound effects.
 
 **Status**: ✅ **Phase 2 Complete** - Enhanced with animations, save/load, Las Vegas sound effects, and high score tracking
 
@@ -16,7 +16,7 @@ A modern slot machine game implemented in JavaFX with betting system, beautiful 
 - **Auto Reset**: Game automatically resets when you run out of money
 
 ### 🎨 Phase 1: Visual Improvements ✅ COMPLETE
-- **Modern UI**: Gradient background and professional styling
+- **Classic Casino Theme**: A professional UI with a deep green background, and red and gold accents for an authentic casino feel.
 - **Emoji Symbols**: Colorful slot symbols (🍒, 🍋, 🍊, 💎, 7️⃣, 🎰)
 - **Dynamic Messages**: Color-coded win/loss messages
 - **Better Layout**: Organized game information display

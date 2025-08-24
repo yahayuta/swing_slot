@@ -117,7 +117,7 @@ public class SlotAppFX extends Application {
         root.getChildren().addAll(gameInfo, msgbox, reels, betControls, gameControls, rollButton);
         
         // Apply styling
-        root.setStyle("-fx-background-color: linear-gradient(to bottom, #2c3e50, #34495e); -fx-padding: 20;");
+        root.setStyle("-fx-background-color: linear-gradient(to bottom, #1E5631, #143a20); -fx-padding: 20;");
         
         // Set up and show the scene
         Scene scene = new Scene(root, 450, 600);
@@ -141,7 +141,7 @@ public class SlotAppFX extends Application {
         
         // Style the reels
         String reelStyle = "-fx-font-size: 24px; -fx-font-weight: bold; -fx-alignment: center; " +
-                          "-fx-background-color: #ecf0f1; -fx-border-color: #bdc3c7; -fx-border-width: 2;";
+                          "-fx-background-color: #ecf0f1; -fx-border-color: #f1c40f; -fx-border-width: 2;";
         reel1.setStyle(reelStyle);
         reel2.setStyle(reelStyle);
         reel3.setStyle(reelStyle);
@@ -154,20 +154,20 @@ public class SlotAppFX extends Application {
     
     private void setupButtons() {
         // Style the roll button
-        rollButton.setStyle("-fx-font-size: 16px; -fx-font-weight: bold; -fx-background-color: #e74c3c; " +
+        rollButton.setStyle("-fx-font-size: 16px; -fx-font-weight: bold; -fx-background-color: #c0392b; " +
                            "-fx-text-fill: white; -fx-padding: 10 20; -fx-cursor: hand;");
         rollButton.setPrefWidth(120);
         
         // Style bet buttons
-        String betButtonStyle = "-fx-font-size: 12px; -fx-font-weight: bold; -fx-background-color: #3498db; " +
-                               "-fx-text-fill: white; -fx-padding: 8 12; -fx-cursor: hand;";
+        String betButtonStyle = "-fx-font-size: 12px; -fx-font-weight: bold; -fx-background-color: #f1c40f; " +
+                               "-fx-text-fill: black; -fx-padding: 8 12; -fx-cursor: hand;";
         bet1Button.setStyle(betButtonStyle);
         bet5Button.setStyle(betButtonStyle);
         bet10Button.setStyle(betButtonStyle);
         maxBetButton.setStyle(betButtonStyle);
         
         // Style game control buttons
-        String gameButtonStyle = "-fx-font-size: 11px; -fx-font-weight: bold; -fx-background-color: #27ae60; " +
+        String gameButtonStyle = "-fx-font-size: 11px; -fx-font-weight: bold; -fx-background-color: #a93226; " +
                                 "-fx-text-fill: white; -fx-padding: 6 10; -fx-cursor: hand;";
         saveButton.setStyle(gameButtonStyle);
         loadButton.setStyle(gameButtonStyle);
@@ -322,7 +322,7 @@ public class SlotAppFX extends Application {
         messageAnimation.play();
         
         msgbox.setText("🎰 SPINNING... 🎰");
-        msgbox.setStyle("-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #3498db; " +
+        msgbox.setStyle("-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #f1c40f; " +
                        "-fx-background-color: #2c3e50; -fx-padding: 10; -fx-alignment: center;");
         
         playSound("spin");
@@ -379,7 +379,7 @@ public class SlotAppFX extends Application {
                 msgbox.setText("🎉 WIN! +$" + win + " 🎉");
                 playSound("win");
             }
-            msgbox.setStyle("-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #27ae60; " +
+            msgbox.setStyle("-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #FFFFFF; " +
                            "-fx-background-color: #2c3e50; -fx-padding: 10; -fx-alignment: center;");
         } else {
             msgbox.setText("Better luck next time! Bet: $" + currentBet);
@@ -469,7 +469,7 @@ public class SlotAppFX extends Application {
                 loadConfirm.play();
                 
                 msgbox.setText("Game loaded successfully!");
-                msgbox.setStyle("-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #27ae60; " +
+                msgbox.setStyle("-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #FFFFFF; " +
                                "-fx-background-color: #2c3e50; -fx-padding: 10; -fx-alignment: center;");
             } else {
                 showAlert("No Save File", "No saved game found. Starting fresh!");
