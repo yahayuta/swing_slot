@@ -84,12 +84,12 @@ public class SlotAppFX extends Application {
         setupAnimations();
         
         // Layout for betting controls
-        HBox betControls = new HBox(5);
+        HBox betControls = new HBox(10);
         betControls.setAlignment(Pos.CENTER);
         betControls.getChildren().addAll(bet1Button, bet5Button, bet10Button, maxBetButton);
         
         // Layout for game controls
-        HBox gameControls = new HBox(5);
+        HBox gameControls = new HBox(10);
         gameControls.setAlignment(Pos.CENTER);
         gameControls.getChildren().addAll(saveButton, loadButton, resetButton, soundButton);
         
@@ -101,7 +101,7 @@ public class SlotAppFX extends Application {
         // Layout for game info
         GridPane gameInfo = new GridPane();
         gameInfo.setHgap(20);
-        gameInfo.setVgap(5);
+        gameInfo.setVgap(10);
         gameInfo.setAlignment(Pos.CENTER);
         gameInfo.add(balanceLabel, 0, 0);
         gameInfo.add(betLabel, 1, 0);
@@ -111,16 +111,16 @@ public class SlotAppFX extends Application {
         gameInfo.add(bestWinLabel, 1, 2);
         
         // Main layout
-        VBox root = new VBox(15);
+        VBox root = new VBox(20);
         root.setAlignment(Pos.CENTER);
         root.setPadding(new Insets(20));
         root.getChildren().addAll(gameInfo, msgbox, reels, betControls, gameControls, rollButton);
         
         // Apply styling
-        root.setStyle("-fx-background-color: linear-gradient(to bottom, #1E5631, #143a20); -fx-padding: 20;");
+        root.setStyle("-fx-background-color: radial-gradient(center 50% 50%, radius 50%, #2E8B57, #143a20); -fx-padding: 20;");
         
         // Set up and show the scene
-        Scene scene = new Scene(root, 450, 600);
+        Scene scene = new Scene(root, 500, 650);
         primaryStage.setTitle("🎰 ENHANCED SLOT MACHINE - PHASE 2 🎰");
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
@@ -140,8 +140,9 @@ public class SlotAppFX extends Application {
         reel3.setEditable(false);
         
         // Style the reels
-        String reelStyle = "-fx-font-size: 24px; -fx-font-weight: bold; -fx-alignment: center; " +
-                          "-fx-background-color: #ecf0f1; -fx-border-color: #f1c40f; -fx-border-width: 2;";
+        String reelStyle = "-fx-font-family: 'Arial', sans-serif; -fx-font-size: 36px; -fx-font-weight: bold; -fx-alignment: center; " +
+                          "-fx-background-color: #ffffff; -fx-border-color: #f1c40f; -fx-border-width: 3; -fx-border-radius: 5; " +
+                          "-fx-background-radius: 5; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 5);";
         reel1.setStyle(reelStyle);
         reel2.setStyle(reelStyle);
         reel3.setStyle(reelStyle);
@@ -154,25 +155,35 @@ public class SlotAppFX extends Application {
     
     private void setupButtons() {
         // Style the roll button
-        rollButton.setStyle("-fx-font-size: 16px; -fx-font-weight: bold; -fx-background-color: #c0392b; " +
-                           "-fx-text-fill: white; -fx-padding: 10 20; -fx-cursor: hand;");
-        rollButton.setPrefWidth(120);
+        String rollButtonStyle = "-fx-font-family: 'Arial', sans-serif; -fx-font-size: 20px; -fx-font-weight: bold; -fx-background-color: #e74c3c; " +
+                                 "-fx-text-fill: white; -fx-padding: 12 25; -fx-cursor: hand; -fx-background-radius: 8; " +
+                                 "-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 3);";
+        rollButton.setStyle(rollButtonStyle);
+        rollButton.setPrefWidth(150);
+        rollButton.setOnMouseEntered(e -> rollButton.setStyle(rollButtonStyle + "-fx-background-color: #c0392b;"));
+        rollButton.setOnMouseExited(e -> rollButton.setStyle(rollButtonStyle));
         
         // Style bet buttons
-        String betButtonStyle = "-fx-font-size: 12px; -fx-font-weight: bold; -fx-background-color: #f1c40f; " +
-                               "-fx-text-fill: black; -fx-padding: 8 12; -fx-cursor: hand;";
-        bet1Button.setStyle(betButtonStyle);
-        bet5Button.setStyle(betButtonStyle);
-        bet10Button.setStyle(betButtonStyle);
-        maxBetButton.setStyle(betButtonStyle);
+        updateBetButtonStyles();
         
         // Style game control buttons
-        String gameButtonStyle = "-fx-font-size: 11px; -fx-font-weight: bold; -fx-background-color: #a93226; " +
-                                "-fx-text-fill: white; -fx-padding: 6 10; -fx-cursor: hand;";
+        String gameButtonStyle = "-fx-font-family: 'Arial', sans-serif; -fx-font-size: 12px; -fx-font-weight: bold; -fx-background-color: #34495e; " +
+                                 "-fx-text-fill: white; -fx-padding: 8 12; -fx-cursor: hand; -fx-background-radius: 5;";
+        String gameButtonHoverStyle = gameButtonStyle + "-fx-background-color: #2c3e50;";
+        
         saveButton.setStyle(gameButtonStyle);
         loadButton.setStyle(gameButtonStyle);
         resetButton.setStyle(gameButtonStyle);
         soundButton.setStyle(gameButtonStyle);
+        
+        saveButton.setOnMouseEntered(e -> saveButton.setStyle(gameButtonHoverStyle));
+        saveButton.setOnMouseExited(e -> saveButton.setStyle(gameButtonStyle));
+        loadButton.setOnMouseEntered(e -> loadButton.setStyle(gameButtonHoverStyle));
+        loadButton.setOnMouseExited(e -> loadButton.setStyle(gameButtonStyle));
+        resetButton.setOnMouseEntered(e -> resetButton.setStyle(gameButtonHoverStyle));
+        resetButton.setOnMouseExited(e -> resetButton.setStyle(gameButtonStyle));
+        soundButton.setOnMouseEntered(e -> soundButton.setStyle(gameButtonHoverStyle));
+        soundButton.setOnMouseExited(e -> soundButton.setStyle(gameButtonStyle));
         
         // Set button actions
         rollButton.setOnAction(e -> onRoll());
@@ -186,15 +197,36 @@ public class SlotAppFX extends Application {
         soundButton.setOnAction(e -> toggleSound());
     }
     
+    private void updateBetButtonStyles() {
+        String betButtonStyle = "-fx-font-family: 'Arial', sans-serif; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #f1c40f; " +
+                                "-fx-text-fill: black; -fx-padding: 8 15; -fx-cursor: hand; -fx-background-radius: 5;";
+        String betButtonHoverStyle = betButtonStyle + "-fx-background-color: #f39c12;";
+        String activeBetButtonStyle = betButtonStyle + "-fx-background-color: #f39c12; -fx-border-color: #c0392b; -fx-border-width: 2; -fx-border-radius: 5;";
+
+        bet1Button.setStyle(currentBet == 1 ? activeBetButtonStyle : betButtonStyle);
+        bet5Button.setStyle(currentBet == 5 ? activeBetButtonStyle : betButtonStyle);
+        bet10Button.setStyle(currentBet == 10 ? activeBetButtonStyle : betButtonStyle);
+        maxBetButton.setStyle(currentBet == 100 ? activeBetButtonStyle : betButtonStyle);
+
+        bet1Button.setOnMouseEntered(e -> bet1Button.setStyle(currentBet == 1 ? activeBetButtonStyle : betButtonHoverStyle));
+        bet1Button.setOnMouseExited(e -> bet1Button.setStyle(currentBet == 1 ? activeBetButtonStyle : betButtonStyle));
+        bet5Button.setOnMouseEntered(e -> bet5Button.setStyle(currentBet == 5 ? activeBetButtonStyle : betButtonHoverStyle));
+        bet5Button.setOnMouseExited(e -> bet5Button.setStyle(currentBet == 5 ? activeBetButtonStyle : betButtonStyle));
+        bet10Button.setOnMouseEntered(e -> bet10Button.setStyle(currentBet == 10 ? activeBetButtonStyle : betButtonHoverStyle));
+        bet10Button.setOnMouseExited(e -> bet10Button.setStyle(currentBet == 10 ? activeBetButtonStyle : betButtonStyle));
+        maxBetButton.setOnMouseEntered(e -> maxBetButton.setStyle(currentBet == 100 ? activeBetButtonStyle : betButtonHoverStyle));
+        maxBetButton.setOnMouseExited(e -> maxBetButton.setStyle(currentBet == 100 ? activeBetButtonStyle : betButtonStyle));
+    }
+    
     private void setupLabels() {
         // Style the message box
-        msgbox.setStyle("-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #f39c12; " +
-                       "-fx-background-color: #2c3e50; -fx-padding: 10; -fx-alignment: center;");
-        msgbox.setPrefWidth(350);
+        msgbox.setStyle("-fx-font-family: 'Arial', sans-serif; -fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #f39c12; " +
+                       "-fx-background-color: #2c3e50; -fx-padding: 12; -fx-alignment: center; -fx-background-radius: 8;");
+        msgbox.setPrefWidth(400);
         msgbox.setAlignment(Pos.CENTER);
         
         // Style info labels
-        String labelStyle = "-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ecf0f1;";
+        String labelStyle = "-fx-font-family: 'Arial', sans-serif; -fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #ecf0f1;";
         balanceLabel.setStyle(labelStyle);
         betLabel.setStyle(labelStyle);
         winsLabel.setStyle(labelStyle);
@@ -254,6 +286,7 @@ public class SlotAppFX extends Application {
         if (betAmount <= userScore) {
             currentBet = betAmount;
             updateLabels();
+            updateBetButtonStyles();
             playSound("toggle");
         } else {
             showAlert("Insufficient Balance", "You don't have enough money for this bet!");
@@ -322,8 +355,8 @@ public class SlotAppFX extends Application {
         messageAnimation.play();
         
         msgbox.setText("🎰 SPINNING... 🎰");
-        msgbox.setStyle("-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #f1c40f; " +
-                       "-fx-background-color: #2c3e50; -fx-padding: 10; -fx-alignment: center;");
+        msgbox.setStyle("-fx-font-family: 'Arial', sans-serif; -fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #f1c40f; " +
+                       "-fx-background-color: #2c3e50; -fx-padding: 12; -fx-alignment: center; -fx-background-radius: 8;");
         
         playSound("spin");
     }
@@ -379,12 +412,12 @@ public class SlotAppFX extends Application {
                 msgbox.setText("🎉 WIN! +$" + win + " 🎉");
                 playSound("win");
             }
-            msgbox.setStyle("-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #FFFFFF; " +
-                           "-fx-background-color: #2c3e50; -fx-padding: 10; -fx-alignment: center;");
+            msgbox.setStyle("-fx-font-family: 'Arial', sans-serif; -fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #FFFFFF; " +
+                           "-fx-background-color: #27ae60; -fx-padding: 12; -fx-alignment: center; -fx-background-radius: 8;");
         } else {
             msgbox.setText("Better luck next time! Bet: $" + currentBet);
-            msgbox.setStyle("-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #e74c3c; " +
-                           "-fx-background-color: #2c3e50; -fx-padding: 10; -fx-alignment: center;");
+            msgbox.setStyle("-fx-font-family: 'Arial', sans-serif; -fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #e74c3c; " +
+                           "-fx-background-color: #2c3e50; -fx-padding: 12; -fx-alignment: center; -fx-background-radius: 8;");
             playSound("lose");
         }
         
@@ -398,9 +431,10 @@ public class SlotAppFX extends Application {
         totalSpins = 0;
         currentBet = 1;
         updateLabels();
+        updateBetButtonStyles();
         msgbox.setText("Game Reset! Press ROLL to start");
-        msgbox.setStyle("-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #f39c12; " +
-                       "-fx-background-color: #2c3e50; -fx-padding: 10; -fx-alignment: center;");
+        msgbox.setStyle("-fx-font-family: 'Arial', sans-serif; -fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #f39c12; " +
+                       "-fx-background-color: #2c3e50; -fx-padding: 12; -fx-alignment: center; -fx-background-radius: 8;");
         saveGameData();
     }
     
@@ -456,6 +490,7 @@ public class SlotAppFX extends Application {
                 soundEnabled = Boolean.parseBoolean(props.getProperty("soundEnabled", "true"));
                 
                 updateLabels();
+                updateBetButtonStyles();
                 soundButton.setText(soundEnabled ? "🔊 SOUND ON" : "🔇 SOUND OFF");
                 
                 // Show load confirmation
@@ -469,8 +504,8 @@ public class SlotAppFX extends Application {
                 loadConfirm.play();
                 
                 msgbox.setText("Game loaded successfully!");
-                msgbox.setStyle("-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #FFFFFF; " +
-                               "-fx-background-color: #2c3e50; -fx-padding: 10; -fx-alignment: center;");
+                msgbox.setStyle("-fx-font-family: 'Arial', sans-serif; -fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #FFFFFF; " +
+                               "-fx-background-color: #27ae60; -fx-padding: 12; -fx-alignment: center; -fx-background-radius: 8;");
             } else {
                 showAlert("No Save File", "No saved game found. Starting fresh!");
             }
