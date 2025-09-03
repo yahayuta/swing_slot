@@ -9,6 +9,10 @@ A modern slot machine game implemented in JavaFX. Features a "Classic Casino" th
 ## ✨ New Features
 
 ### 🎨 Phase 3: Modern UI & UX ✅ COMPLETE
+- **Theming Engine**: Switch between a "Classic Casino" and a "Modern Dark" theme.
+- **Advanced Animations**: Engaging animations for wins and jackpots.
+- **Spin History**: View the results of your last few spins.
+- **Responsive Horizontal Layout**: The UI now adapts to different window sizes with a horizontal orientation.
 - **Modern Aesthetics**: A visually appealing UI with a dynamic gradient background, giving the application a fresh and modern look.
 - **Improved Readability**: Enhanced fonts and text styles for better readability and a cleaner user experience.
 - **Interactive Buttons**: Modern button styling with hover effects and visual feedback for a more engaging interaction.
@@ -101,10 +105,10 @@ A modern slot machine game implemented in JavaFX. Features a "Classic Casino" th
 javac SoundGenerator.java
 java SoundGenerator
 
-# Compile (Phase 2)
+# Compile (Phase 3)
 javac --module-path "C:\javafx-sdk-24.0.1\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.media SlotAppFX.java
 
-# Run (Phase 2)
+# Run (Phase 3)
 java --module-path "C:\javafx-sdk-24.0.1\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.media SlotAppFX
 ```
 
@@ -135,6 +139,7 @@ java --module-path "C:\javafx-sdk-24.0.1\lib" --add-modules javafx.controls,java
 - **📂 LOAD**: Load previous game state
 - **🔄 RESET**: Reset game to starting state
 - **🔊 SOUND**: Toggle sound effects
+- **Theme Selector**: Choose between "Classic" and "Dark" themes.
 
 ### Save/Load Features
 - **Auto-Save**: Game automatically saves after each spin
@@ -157,9 +162,11 @@ java --module-path "C:\javafx-sdk-24.0.1\lib" --add-modules javafx.controls,java
 ```
 ├── SlotAppFX.java          # Enhanced JavaFX version (Phase 3) ✅
 ├── SoundGenerator.java     # Las Vegas sound effects generator ✅
+├── classic.css             # CSS for the Classic theme ✅
+├── dark.css                # CSS for the Dark theme ✅
 ├── swingSlot.java          # Legacy Swing version (for reference)
-├── compile_fx.bat          # Compile script (Phase 2) ✅
-├── run_fx.bat              # Run script (Phase 2) ✅
+├── compile_fx.bat          # Compile script (Phase 3) ✅
+├── run_fx.bat              # Run script (Phase 3) ✅
 ├── generate_sounds.bat     # Sound generation script ✅
 ├── sounds/                 # Generated Las Vegas sound effects ✅
 │   ├── spin.wav           # Authentic mechanical reel spinning
@@ -180,6 +187,10 @@ java --module-path "C:\javafx-sdk-24.0.1\lib" --add-modules javafx.controls,java
 ## 🔧 Technical Details
 
 ### Phase 3 Features ✅
+- **Theming Engine**: Switch between a "Classic Casino" and a "Modern Dark" theme using external CSS files.
+- **Advanced Animations**: Engaging animations for wins and jackpots.
+- **Spin History**: View the results of your last few spins.
+- **Responsive Horizontal Layout**: The UI now adapts to different window sizes with a horizontal orientation.
 - **Modern UI/UX**: A complete UI overhaul with a modern aesthetic, improved fonts, and interactive buttons.
 - **Dynamic Background**: A radial gradient background that gives the application a professional and polished look.
 - **Enhanced Reel Design**: Redesigned reels that are more visually appealing and easier to read.
